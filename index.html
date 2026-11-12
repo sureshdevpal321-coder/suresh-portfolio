@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Suresh Kumar — Video Editor &amp; Visual Storyteller</title>
+  <meta name="description" content="Suresh Kumar is a video editor and visual storyteller. I turn raw footage into stories worth watching — short-form, long-form, documentary and personal brand editing.">
+  <meta name="theme-color" content="#202828">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Suresh Kumar — Video Editor &amp; Visual Storyteller">
+  <meta property="og:description" content="I turn raw footage into stories worth watching.">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23202828'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' text-anchor='middle' fill='%23F0E8E0'%3ESK%3C/text%3E%3C/svg%3E">
+
+  <!-- Lets CSS know JavaScript is running (so scroll-reveal never hides content for no-JS visitors) -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Suresh Kumar",
+    "jobTitle": "Video Editor & Visual Storyteller",
+    "sameAs": ["https://www.instagram.com/i.am.suresh___/", "https://www.linkedin.com/in/suresh-kumar-8bbb41433"]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- =============== NAVIGATION =============== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="#home" aria-label="Suresh Kumar — home">SURESH KUMAR</a>
+
+      <div class="nav__menu" id="navMenu">
+        <nav aria-label="Primary">
+          <ul class="nav__list">
+            <li><a href="#home" data-link="home">Home</a></li>
+            <li><a href="#work" data-link="work">Work</a></li>
+            <li><a href="#about" data-link="about">About</a></li>
+            <li><a href="#services" data-link="services">Services</a></li>
+            <li><a href="#contact" data-link="contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="btn nav__cta" href="#contact">Let’s Work Together <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+
+      <button class="nav__toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =============== HERO =============== -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__top reveal">
+          <p class="eyebrow">Suresh Kumar — Video Editor &amp; Visual Storyteller</p>
+          <p class="status"><span class="status__dot" aria-hidden="true"></span><span data-status>Available for new projects</span></p>
+        </div>
+
+        <h1 class="hero__title reveal" id="hero-title">I turn raw footage into <em>stories worth watching.</em></h1>
+
+        <div class="hero__row">
+          <div class="hero__copy reveal">
+            <p class="hero__lead">Crafting engaging videos through thoughtful editing, visual storytelling and sound design.</p>
+            <p class="hero__intro">Hi, I’m Suresh. I work with creators to shape their footage into videos that are clear, well-paced and made to hold attention.</p>
+            <div class="hero__actions">
+              <a class="btn" href="#work">View My Work <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="btn btn--ghost" href="#contact">Contact Me</a>
+            </div>
+          </div>
+
+          <ul class="hero__list reveal" aria-label="What I edit">
+            <li>Short-form</li>
+            <li>Long-form</li>
+            <li>Documentary</li>
+            <li>Personal Brand</li>
+          </ul>
+        </div>
+
+        <div class="reveal" id="heroFrameWrap">
+          <button class="frame" id="heroFrame" type="button" aria-label="Play featured project">
+            <span class="frame__corner frame__corner--tl" aria-hidden="true"></span>
+            <span class="frame__corner frame__corner--tr" aria-hidden="true"></span>
+            <span class="frame__corner frame__corner--bl" aria-hidden="true"></span>
+            <span class="frame__corner frame__corner--br" aria-hidden="true"></span>
+            <span class="frame__label">Featured work</span>
+            <span class="frame__tc" id="heroFrameCat" aria-hidden="true"></span>
+            <span class="frame__title" id="heroFrameTitle"></span>
+            <span class="frame__play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== SELECTED WORK =============== -->
+    <section class="section section--dark" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Selected Work</p>
+          <h2 class="h2" id="work-title">Projects</h2>
+        </div>
+
+        <div class="filters reveal" id="filters" role="group" aria-label="Filter projects by category"><!-- filled by js/main.js --></div>
+
+        <div class="grid" id="projectGrid" aria-live="polite"><!-- filled by js/main.js --></div>
+        <p class="empty" id="emptyState" hidden>No projects in this category yet.</p>
+
+        <noscript><p class="empty">Please enable JavaScript to see the project gallery, or visit my Instagram.</p></noscript>
+      </div>
+    </section>
+
+    <!-- =============== ABOUT =============== -->
+    <section class="section section--grey" id="about" aria-labelledby="about-title">
+      <div class="container about">
+        <div class="about__portrait reveal" id="portrait">
+          <span class="about__mono" aria-hidden="true">SK</span>
+          <span class="about__cap">Portrait coming soon</span>
+        </div>
+
+        <div class="about__text">
+          <p class="eyebrow reveal">About</p>
+          <h2 class="h2 reveal" id="about-title">Every frame has a purpose.</h2>
+          <p class="about__lead reveal">I’m Suresh Kumar, a video editor and visual storyteller. I help creators turn raw footage into videos that are clear, well-paced and worth watching.</p>
+
+          <dl class="about__list" data-stagger>
+            <div>
+              <dt>Creative approach</dt>
+              <dd>I start with the story, not the software. Structure and pacing come first, then sound and visuals, all in service of the idea.</dd>
+            </div>
+            <div>
+              <dt>Editing philosophy</dt>
+              <dd>A good edit goes unnoticed. Every cut, sound and transition has to earn its place and keep the viewer watching.</dd>
+            </div>
+            <div>
+              <dt>Understanding your message</dt>
+              <dd>Before I open the timeline I want to know what you’re trying to say, who it’s for, and how you want people to feel when it ends.</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== SERVICES =============== -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Services</p>
+          <h2 class="h2" id="services-title">How I can help.</h2>
+        </div>
+
+        <ol class="services" data-stagger>
+          <li class="service">
+            <span class="service__no" aria-hidden="true">01</span>
+            <h3 class="service__title">Short-form Video Editing</h3>
+            <p class="service__desc">Reels, Shorts and engaging social media videos.</p>
+          </li>
+          <li class="service">
+            <span class="service__no" aria-hidden="true">02</span>
+            <h3 class="service__title">Long-form Video Editing</h3>
+            <p class="service__desc">YouTube videos and structured storytelling.</p>
+          </li>
+          <li class="service">
+            <span class="service__no" aria-hidden="true">03</span>
+            <h3 class="service__title">Documentary Editing</h3>
+            <p class="service__desc">Narrative-driven edits, cinematic pacing and visual storytelling.</p>
+          </li>
+          <li class="service">
+            <span class="service__no" aria-hidden="true">04</span>
+            <h3 class="service__title">Personal Brand Editing</h3>
+            <p class="service__desc">Content that communicates ideas and builds audience engagement.</p>
+          </li>
+          <li class="service">
+            <span class="service__no" aria-hidden="true">05</span>
+            <h3 class="service__title">Sound Design &amp; Motion Graphics</h3>
+            <p class="service__desc">Purposeful sound effects, transitions and motion graphics.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =============== WORKFLOW =============== -->
+    <section class="section section--slate" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Process</p>
+          <h2 class="h2" id="process-title">A simple, clear workflow.</h2>
+        </div>
+
+        <ol class="steps" data-stagger>
+          <li class="step">
+            <span class="step__no" aria-hidden="true">01</span>
+            <h3 class="step__title">Understand</h3>
+            <p>Understand the creator’s vision and objective.</p>
+          </li>
+          <li class="step">
+            <span class="step__no" aria-hidden="true">02</span>
+            <h3 class="step__title">Plan</h3>
+            <p>Structure the footage and storytelling.</p>
+          </li>
+          <li class="step">
+            <span class="step__no" aria-hidden="true">03</span>
+            <h3 class="step__title">Create</h3>
+            <p>Edit, refine and polish the video.</p>
+          </li>
+          <li class="step">
+            <span class="step__no" aria-hidden="true">04</span>
+            <h3 class="step__title">Deliver</h3>
+            <p>Deliver the final video ready to publish.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =============== CONTACT =============== -->
+    <section class="section section--dark contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <p class="eyebrow reveal">Contact</p>
+        <h2 class="contact__title reveal" id="contact-title">Have a story <em>worth telling?</em></h2>
+        <p class="contact__lead reveal">Let’s turn your next idea into something worth watching.</p>
+
+        <p class="contact__email reveal" id="contactEmail"><!-- filled by js/main.js --></p>
+
+        <div class="contact__actions reveal">
+          <a class="btn btn--light" data-inquiry href="#contact">Start a Project Inquiry <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost-light" data-instagram href="https://www.instagram.com/i.am.suresh___/" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn btn--ghost-light" data-linkedin href="https://www.linkedin.com/in/suresh-kumar-8bbb41433" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============== FOOTER =============== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> Suresh Kumar. All rights reserved.</p>
+      <p class="footer__links">
+        <a data-instagram href="https://www.instagram.com/i.am.suresh___/" target="_blank" rel="noopener">Instagram</a>
+        <a data-linkedin href="https://www.linkedin.com/in/suresh-kumar-8bbb41433" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#home">Back to top ↑</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- =============== VIDEO POP-UP =============== -->
+  <dialog class="modal" id="modal" aria-labelledby="modalTitle">
+    <div class="modal__wrap">
+      <div class="modal__inner" id="modalInner">
+        <div class="modal__bar">
+          <p class="modal__title" id="modalTitle"></p>
+          <button class="modal__close" id="modalClose" type="button" aria-label="Close video">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
+          </button>
+        </div>
+        <div class="modal__player" id="modalPlayer"></div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
